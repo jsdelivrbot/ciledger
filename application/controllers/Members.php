@@ -11,21 +11,24 @@ class Members extends CI_Controller {
 	}
 
 	public function addmembers() {
+		$data = array(
+			'title' => 'Members'
+		);
 
-		$this->load->view('includes/includes');
+		$this->load->view('includes/includes',$data);
 		$this->load->view('menubar/menu');
 		$this->load->view('members/addmembers');
+		$this->load->view('members/modal');
 		$this->load->view('footer/footer-scripts');
 	}
 
 	public function setMembers() {
 
 		$data = $this->input->post();
+		sleep(1);
 		$request = $this->Member_model->setMembers($data);
-		if($request['success']) {
-			$this->addmembers();
-		}
-		else show_error($request['message'],500);
+		if($request['success']) die(json_encode(array('success'=>true,'message'=>$request['message'])));
+		else die(json_encode(array('success'=>false,'message'=>$request['message'])));
 	}
 
 }

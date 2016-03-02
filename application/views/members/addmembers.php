@@ -1,6 +1,6 @@
 <!-- START CONTENT -->
 <div class="ui raised very padded container segment" id="mainform">
-	<form class="ui form" method="POST" action="<?php echo site_url('Members/setMembers');?>">
+	<form class="ui form">
 		<h4 class="ui dividing header">Members Information</h4>
 		<div class=" field">
 			<label>Name</label>
@@ -101,7 +101,12 @@
 					</div>
 					<div class="field">
 						<label>Monthly Income</label>
-						<input type="text" name="monthly_income" />
+						<!-- <input type="text" name="monthly_income" /> -->
+						<div class="ui  input">
+						  <div class="ui basic label">P</div>
+						  <input  type="text" name="monthly_income" placeholder="Amount">
+						  <!-- <div class="ui basic label">.00</div> -->
+						</div>
 					</div>
 				</div>
 			</div>
@@ -177,3 +182,4 @@
 
 </div>
 <!-- END CONTENT -->
+

@@ -14,6 +14,13 @@
 					<a class="item">Member Master List</a>
 				</div>
 			</div>
+			<div class="ui simple dropdown item">
+				House<i class="dropdown icon"></i>
+				<div class="menu">
+					<a class="item" href="<?php echo site_url('/House/addHouse');?>">Add House</a>
+					<a class="item" href="">House Master List</a>
+				</div>
+			</div>
 			<div class="right menu">
 				<a class="item"> Logout</a>
 			</div>

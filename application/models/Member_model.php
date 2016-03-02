@@ -11,19 +11,21 @@ class Member_model extends CI_Model {
 
 	public function setMembers($data) {
 		
-		$this->db->trans_begin();
-		$last_member_id =  $this->settblMembers($data);
-		$this->settblMember_house_status($data);
-		$this->settblMember_access_card($data,$last_member_id);
+		if(!empty($data) || isset($data)) {
+			$this->db->trans_begin();
+			$last_member_id =  $this->settblMembers($data);
+			$this->settblMember_house_status($data);
+			$this->settblMember_access_card($data,$last_member_id);
 
-		if($this->db->trans_status() == false) {
-			$this->db->trans_rollback();
-			return array('success'=>false,'message'=>'Cannot process request, Please try again');
-		}
-		else {
-			$this->db->trans_commit();
-			return array('success'=>true,'message'=>'Insert success');
-		}
+			if($this->db->trans_status() == false) {
+				$this->db->trans_rollback();
+				return array('success'=>false,'message'=>'Cannot process request, Please try again');
+			}
+			else {
+				$this->db->trans_commit();
+				return array('success'=>true,'message'=>'Member successfully added!');
+			}
+		}else return array('success'=>false,'message'=>'Cannot process request, Please try again');
 	
 	}
 
@@ -67,15 +69,19 @@ class Member_model extends CI_Model {
 		$access_card = array();
 		$access_card = $data['access_card'];
 		
-		$this->db->select("*");
-		$this->db->from('tblaccess_card');
-		$this->db->where_in('access_card_name',$access_card);
-		$SQL = $this->db->get();
+		if(!empty($last_member_id) || isset($last_member_id)) {
 
-		foreach ($SQL->result() as $row) {
-			$this->db->insert('tblmember_access_card',array('member_id'=>$last_member_id,'access_card_id'=>$row->access_card_id));
+			$this->db->select("*");
+			$this->db->from('tblaccess_card');
+			$this->db->where_in('access_card_name',$access_card);
+			$SQL = $this->db->get();
+
+			if($SQL->num_rows() > 0 ) {
+				foreach ($SQL->result() as $row) {
+					$this->db->insert('tblmember_access_card',array('member_id'=>$last_member_id,'access_card_id'=>$row->access_card_id));
+				}
+			}
 		}
-
 	}
 
 	private function _dateFormat($date) {

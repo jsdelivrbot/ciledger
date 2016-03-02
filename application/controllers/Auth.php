@@ -18,7 +18,6 @@ class Auth extends CI_Controller {
 		 }
 		 else $this->load->view('login/login',array('success'=>false,'error_msg'=>'Invalid username or password'));
 		
-
 	}
 
 }

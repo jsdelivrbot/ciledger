@@ -12,8 +12,7 @@ $('#calender_birthdate').calendar({
 });
 
 // validation addmembers form
-$('.ui.form')
-  .form({
+var formValidationRules = {
     fields: {
       gender: {
         identifier  : 'gender',
@@ -61,6 +60,9 @@ $('.ui.form')
         rules: [
           {
             type   : 'empty',
+          },
+          {
+            type   : 'number'
           }
         ]
       },
@@ -77,6 +79,9 @@ $('.ui.form')
         rules: [
           {
             type   : 'empty',
+          },
+          {
+            type   : 'number'
           }
         ]
       },
@@ -101,6 +106,9 @@ $('.ui.form')
         rules: [
           {
             type   : 'empty',
+          },
+          {
+            type   : 'number'
           }
         ]
       },
@@ -166,5 +174,21 @@ $('.ui.form')
         ]
       }
     }
-  });
+  };
 
+
+  $('.ui.form').form(formValidationRules).api({
+    url: '/ciledger/Members/setMembers',
+    method: 'POST',
+    data: $('.ui.form').form('get values'),
+    serializeForm: true,
+    onSuccess: function(response) {
+        $('.ui.form').form('reset');
+        $('#modalContent').text(response.message);
+        $('.ui.modal.addMember').modal({blurring: true}).modal('show');
+    },
+    onFailure: function(response) {
+        $('#modalContent').text(response.message);
+        $('.ui.modal.addMember').modal({blurring: true}).modal('show');
+    }
+  });
