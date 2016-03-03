@@ -25,10 +25,10 @@ class Members extends CI_Controller {
 	public function setMembers() {
 
 		$data = $this->input->post();
-		sleep(1);
 		$request = $this->Member_model->setMembers($data);
 		if($request['success']) die(json_encode(array('success'=>true,'message'=>$request['message'])));
 		else die(json_encode(array('success'=>false,'message'=>$request['message'])));
+		
 	}
 
 }
