@@ -12,12 +12,12 @@ class House extends CI_Controller {
 	public function addHouse() {
 		
 		$data = array(
-			'title' => 'Members'
+			'title' => 'House'
 		);
 
 		$this->load->view('includes/includes',$data);
 		$this->load->view('menubar/menu');
-		
+
 	}
 
 }

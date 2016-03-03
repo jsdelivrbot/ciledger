@@ -12882,3 +12882,121 @@ INFO - 2016-03-02 21:40:28 --> File loaded: C:\xampp\htdocs\ciledger\application
 INFO - 2016-03-02 21:40:28 --> File loaded: C:\xampp\htdocs\ciledger\application\views\footer/footer-scripts.php
 INFO - 2016-03-02 21:40:28 --> Final output sent to browser
 DEBUG - 2016-03-02 21:40:28 --> Total execution time: 0.0920
+INFO - 2016-03-02 21:53:19 --> Config Class Initialized
+INFO - 2016-03-02 21:53:19 --> Hooks Class Initialized
+DEBUG - 2016-03-02 21:53:19 --> UTF-8 Support Enabled
+INFO - 2016-03-02 21:53:19 --> Utf8 Class Initialized
+INFO - 2016-03-02 21:53:19 --> URI Class Initialized
+INFO - 2016-03-02 21:53:19 --> Router Class Initialized
+INFO - 2016-03-02 21:53:19 --> Output Class Initialized
+INFO - 2016-03-02 21:53:19 --> Security Class Initialized
+DEBUG - 2016-03-02 21:53:19 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-02 21:53:19 --> Input Class Initialized
+INFO - 2016-03-02 21:53:19 --> Language Class Initialized
+INFO - 2016-03-02 21:53:19 --> Loader Class Initialized
+INFO - 2016-03-02 21:53:19 --> Helper loaded: url_helper
+INFO - 2016-03-02 21:53:19 --> Database Driver Class Initialized
+INFO - 2016-03-02 21:53:19 --> Session: Class initialized using 'files' driver.
+INFO - 2016-03-02 21:53:19 --> Helper loaded: form_helper
+INFO - 2016-03-02 21:53:19 --> Form Validation Class Initialized
+INFO - 2016-03-02 21:53:19 --> Controller Class Initialized
+INFO - 2016-03-02 21:53:19 --> File loaded: C:\xampp\htdocs\ciledger\application\views\includes/includes.php
+INFO - 2016-03-02 21:53:19 --> File loaded: C:\xampp\htdocs\ciledger\application\views\menubar/menu.php
+INFO - 2016-03-02 21:53:19 --> Final output sent to browser
+DEBUG - 2016-03-02 21:53:19 --> Total execution time: 0.1320
+INFO - 2016-03-02 21:53:21 --> Config Class Initialized
+INFO - 2016-03-02 21:53:21 --> Hooks Class Initialized
+DEBUG - 2016-03-02 21:53:21 --> UTF-8 Support Enabled
+INFO - 2016-03-02 21:53:21 --> Utf8 Class Initialized
+INFO - 2016-03-02 21:53:21 --> URI Class Initialized
+INFO - 2016-03-02 21:53:21 --> Router Class Initialized
+INFO - 2016-03-02 21:53:21 --> Output Class Initialized
+INFO - 2016-03-02 21:53:21 --> Security Class Initialized
+DEBUG - 2016-03-02 21:53:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-02 21:53:21 --> Input Class Initialized
+INFO - 2016-03-02 21:53:21 --> Language Class Initialized
+INFO - 2016-03-02 21:53:21 --> Loader Class Initialized
+INFO - 2016-03-02 21:53:21 --> Helper loaded: url_helper
+INFO - 2016-03-02 21:53:21 --> Database Driver Class Initialized
+INFO - 2016-03-02 21:53:21 --> Session: Class initialized using 'files' driver.
+INFO - 2016-03-02 21:53:21 --> Helper loaded: form_helper
+INFO - 2016-03-02 21:53:21 --> Form Validation Class Initialized
+INFO - 2016-03-02 21:53:21 --> Controller Class Initialized
+INFO - 2016-03-02 21:53:21 --> Model Class Initialized
+INFO - 2016-03-02 21:53:21 --> File loaded: C:\xampp\htdocs\ciledger\application\views\includes/includes.php
+INFO - 2016-03-02 21:53:21 --> File loaded: C:\xampp\htdocs\ciledger\application\views\menubar/menu.php
+INFO - 2016-03-02 21:53:21 --> File loaded: C:\xampp\htdocs\ciledger\application\views\members/addmembers.php
+INFO - 2016-03-02 21:53:21 --> File loaded: C:\xampp\htdocs\ciledger\application\views\members/modal.php
+INFO - 2016-03-02 21:53:21 --> File loaded: C:\xampp\htdocs\ciledger\application\views\footer/footer-scripts.php
+INFO - 2016-03-02 21:53:21 --> Final output sent to browser
+DEBUG - 2016-03-02 21:53:21 --> Total execution time: 0.0670
+INFO - 2016-03-02 21:53:22 --> Config Class Initialized
+INFO - 2016-03-02 21:53:22 --> Hooks Class Initialized
+DEBUG - 2016-03-02 21:53:22 --> UTF-8 Support Enabled
+INFO - 2016-03-02 21:53:22 --> Utf8 Class Initialized
+INFO - 2016-03-02 21:53:22 --> URI Class Initialized
+INFO - 2016-03-02 21:53:22 --> Router Class Initialized
+INFO - 2016-03-02 21:53:22 --> Output Class Initialized
+INFO - 2016-03-02 21:53:22 --> Security Class Initialized
+DEBUG - 2016-03-02 21:53:22 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-02 21:53:22 --> Input Class Initialized
+INFO - 2016-03-02 21:53:22 --> Language Class Initialized
+INFO - 2016-03-02 21:53:22 --> Loader Class Initialized
+INFO - 2016-03-02 21:53:22 --> Helper loaded: url_helper
+INFO - 2016-03-02 21:53:22 --> Database Driver Class Initialized
+INFO - 2016-03-02 21:53:22 --> Session: Class initialized using 'files' driver.
+INFO - 2016-03-02 21:53:22 --> Helper loaded: form_helper
+INFO - 2016-03-02 21:53:22 --> Form Validation Class Initialized
+INFO - 2016-03-02 21:53:22 --> Controller Class Initialized
+INFO - 2016-03-02 21:53:22 --> Model Class Initialized
+INFO - 2016-03-02 21:53:22 --> File loaded: C:\xampp\htdocs\ciledger\application\views\includes/includes.php
+INFO - 2016-03-02 21:53:22 --> File loaded: C:\xampp\htdocs\ciledger\application\views\menubar/menu.php
+INFO - 2016-03-02 21:53:22 --> File loaded: C:\xampp\htdocs\ciledger\application\views\members/addmembers.php
+INFO - 2016-03-02 21:53:22 --> File loaded: C:\xampp\htdocs\ciledger\application\views\members/modal.php
+INFO - 2016-03-02 21:53:22 --> File loaded: C:\xampp\htdocs\ciledger\application\views\footer/footer-scripts.php
+INFO - 2016-03-02 21:53:22 --> Final output sent to browser
+DEBUG - 2016-03-02 21:53:22 --> Total execution time: 0.0490
+INFO - 2016-03-02 21:53:23 --> Config Class Initialized
+INFO - 2016-03-02 21:53:23 --> Hooks Class Initialized
+DEBUG - 2016-03-02 21:53:23 --> UTF-8 Support Enabled
+INFO - 2016-03-02 21:53:23 --> Utf8 Class Initialized
+INFO - 2016-03-02 21:53:23 --> URI Class Initialized
+INFO - 2016-03-02 21:53:23 --> Router Class Initialized
+INFO - 2016-03-02 21:53:23 --> Output Class Initialized
+INFO - 2016-03-02 21:53:23 --> Security Class Initialized
+DEBUG - 2016-03-02 21:53:23 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-02 21:53:23 --> Input Class Initialized
+INFO - 2016-03-02 21:53:23 --> Language Class Initialized
+INFO - 2016-03-02 21:53:23 --> Loader Class Initialized
+INFO - 2016-03-02 21:53:23 --> Helper loaded: url_helper
+INFO - 2016-03-02 21:53:23 --> Database Driver Class Initialized
+INFO - 2016-03-02 21:53:23 --> Session: Class initialized using 'files' driver.
+INFO - 2016-03-02 21:53:23 --> Helper loaded: form_helper
+INFO - 2016-03-02 21:53:23 --> Form Validation Class Initialized
+INFO - 2016-03-02 21:53:23 --> Controller Class Initialized
+INFO - 2016-03-02 21:53:23 --> File loaded: C:\xampp\htdocs\ciledger\application\views\includes/includes.php
+INFO - 2016-03-02 21:53:23 --> File loaded: C:\xampp\htdocs\ciledger\application\views\menubar/menu.php
+INFO - 2016-03-02 21:53:23 --> Final output sent to browser
+DEBUG - 2016-03-02 21:53:23 --> Total execution time: 0.0720
+INFO - 2016-03-02 21:53:34 --> Config Class Initialized
+INFO - 2016-03-02 21:53:34 --> Hooks Class Initialized
+DEBUG - 2016-03-02 21:53:34 --> UTF-8 Support Enabled
+INFO - 2016-03-02 21:53:34 --> Utf8 Class Initialized
+INFO - 2016-03-02 21:53:34 --> URI Class Initialized
+INFO - 2016-03-02 21:53:34 --> Router Class Initialized
+INFO - 2016-03-02 21:53:34 --> Output Class Initialized
+INFO - 2016-03-02 21:53:34 --> Security Class Initialized
+DEBUG - 2016-03-02 21:53:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-02 21:53:34 --> Input Class Initialized
+INFO - 2016-03-02 21:53:34 --> Language Class Initialized
+INFO - 2016-03-02 21:53:34 --> Loader Class Initialized
+INFO - 2016-03-02 21:53:34 --> Helper loaded: url_helper
+INFO - 2016-03-02 21:53:34 --> Database Driver Class Initialized
+INFO - 2016-03-02 21:53:34 --> Session: Class initialized using 'files' driver.
+INFO - 2016-03-02 21:53:34 --> Helper loaded: form_helper
+INFO - 2016-03-02 21:53:34 --> Form Validation Class Initialized
+INFO - 2016-03-02 21:53:34 --> Controller Class Initialized
+INFO - 2016-03-02 21:53:34 --> File loaded: C:\xampp\htdocs\ciledger\application\views\includes/includes.php
+INFO - 2016-03-02 21:53:34 --> File loaded: C:\xampp\htdocs\ciledger\application\views\menubar/menu.php
+INFO - 2016-03-02 21:53:34 --> Final output sent to browser
+DEBUG - 2016-03-02 21:53:34 --> Total execution time: 0.0800
