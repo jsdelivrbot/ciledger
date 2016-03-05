@@ -7,13 +7,13 @@
 					<label>House Details</label>
 					<div class="three fields">
 						<div class="field">
-							<input type="text" name="block_no" placeholder="Block no">
+							<input type="text" name="house_block_no" placeholder="Block no">
 						</div>
 						<div class="field">
-							<input type="text" name="lot_no" placeholder="Lot no">
+							<input type="text" name="house_lot_no" placeholder="Lot no">
 						</div>
 						<div class="field">
-							<input type="text" name="area" placeholder="Area">
+							<input type="text" name="house_area" placeholder="Area">
 						</div>
 					</div>
 				</div>

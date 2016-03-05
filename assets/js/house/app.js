@@ -2,8 +2,8 @@
 
 var houseValidationRules = {
 	fields: {
-		block_no: {
-			identifier: 'block_no',
+		house_block_no: {
+			identifier: 'house_block_no',
 			rules: [
 				{
 					type: 'empty'
@@ -13,8 +13,8 @@ var houseValidationRules = {
 				}
 			]
 		},
-		lot_no: {
-			identifier: 'lot_no',
+		house_lot_no: {
+			identifier: 'house_lot_no',
 			rules: [
 				{
 					type: 'empty'
@@ -24,8 +24,8 @@ var houseValidationRules = {
 				}
 			]
 		},
-		area: {
-			identifier: 'area',
+		house_area: {
+			identifier: 'house_area',
 			rules: [
 				{
 					type: 'empty'
@@ -44,12 +44,29 @@ $('.ui.form.house').form(houseValidationRules).api({
 	data: $('.ui.form').form('get values'),
 	serializeForm: true,
 	onSuccess: function(response) {
-		$('#modalContent').text(response.message);
-		$('.ui.form.house').form('clear');
-		$('#addHouse').modal({blurring: true}).modal('show');
+		if(response.success) {
+			_displayresponse(response);
+		}
+		else {
+			_displayresponse(response);
+		}
 	},
 	onFailure: function(response) {
-		$('#modalContent').text(response.message);
+		$('#modalContent').text("Cannot process request, Please try again");
 		$('#addHouse').modal({blurring: true}).modal('show');
 	}
 });
+
+function _displayresponse(response) {
+	if(response.success) {
+		$('.ui.form.house').form('clear');
+		displayresponse(response);
+	}
+	else
+		displayresponse(response);
+}
+
+function displayresponse(response) {
+	$('#modalContent').text(response.message);
+	$('#addHouse').modal({blurring: true}).modal('show');
+}

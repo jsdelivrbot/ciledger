@@ -7,6 +7,7 @@ class House extends CI_Controller {
 
 		parent::__construct();
 		$this->load->model('House_model');
+		$this->load->helper('response_helper');
 
 	}
 
@@ -41,9 +42,9 @@ class House extends CI_Controller {
 				$message = $request['message'];	
 			}
 
-			die(json_encode(array('success'=>$success,'message'=>$message)));
+			die(json_encode(response($success,$message)));
 
-		} else die(json_encode(array('success'=>false,'message'=> 'Cannot process request, Please try again'))); 
+		} else die(json_encode(response(false,'Cannot process request, Please try again'))); 
 
 	}
 

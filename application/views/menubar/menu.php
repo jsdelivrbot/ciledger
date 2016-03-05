@@ -2,7 +2,7 @@
 <!-- START MENUBAR -->
 <div class="ui compact menu fixed">
 	<div class="ui container">
-		<a href="#" class="header item">
+		<a href="<?php echo site_url('Home');?>" class="header item">
 			<label>Social Housing Financing System</label>
 		</a>
 			<a class="item"> Home</a>

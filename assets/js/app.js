@@ -177,18 +177,35 @@ var formValidationRules = {
   };
 
 
-  $('.ui.form').form(formValidationRules).api({
-    url: '/ciledger/Members/setMembers',
-    method: 'POST',
-    data: $('.ui.form').form('get values'),
-    serializeForm: true,
-    onSuccess: function(response) {
-        $('.ui.form').form('reset');
-        $('#modalContent').text(response.message);
-        $('.ui.modal.addMember').modal({blurring: true}).modal('show');
-    },
-    onFailure: function(response) {
-        $('#modalContent').text(response.message);
-        $('.ui.modal.addMember').modal({blurring: true}).modal('show');
-    }
-  });
+$('.ui.form').form(formValidationRules).api({
+  url: '/ciledger/Members/setMembers',
+  method: 'POST',
+  data: $('.ui.form').form('get values'),
+  serializeForm: true,
+  onSuccess: function(response) {
+     if(response.success) {
+        _displayresponse(response);
+     }
+     else 
+        _displayresponse(response);
+  },
+  onFailure: function(response) {
+      $('#modalContent').text(response.message);
+      $('.ui.modal.addMember').modal({blurring: true}).modal('show');
+  }
+});
+
+
+ function _displayresponse(response) {
+  if(response.success) {
+    $('.ui.form.addMember').form('clear');
+    displayresponse(response);
+  }
+  else
+    displayresponse(response);
+}
+
+function displayresponse(response) {
+  $('#modalContent').text(response.message);
+  $('.ui.modal.addMember').modal({blurring: true}).modal('show');
+}

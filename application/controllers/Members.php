@@ -7,6 +7,7 @@ class Members extends CI_Controller {
 
 		parent::__construct();
 		$this->load->model('Member_model');
+		$this->load->helper('response_helper');
 
 	}
 
@@ -26,8 +27,8 @@ class Members extends CI_Controller {
 
 		$data = $this->input->post();
 		$request = $this->Member_model->setMembers($data);
-		if($request['success']) die(json_encode(array('success'=>true,'message'=>$request['message'])));
-		else die(json_encode(array('success'=>false,'message'=>$request['message'])));
+		if($request['success']) die(json_encode(response(true,$request['message'])));
+		else die(json_encode(response(false,$request['message'])));
 		
 	}
 

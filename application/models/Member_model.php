@@ -6,6 +6,7 @@ class Member_model extends CI_Model {
 	public function __construct() {
 
 		parent::__construct();
+		$this->load->helper('response_helper');
 
 	}
 
@@ -19,13 +20,13 @@ class Member_model extends CI_Model {
 
 			if($this->db->trans_status() == false) {
 				$this->db->trans_rollback();
-				return array('success'=>false,'message'=>'Cannot process request, Please try again');
+				return response(false,'Cannot process request, Please try again');
 			}
 			else {
 				$this->db->trans_commit();
-				return array('success'=>true,'message'=>'Member successfully added!');
+				return response(true,'Member successfully added!');
 			}
-		}else return array('success'=>false,'message'=>'Cannot process request, Please try again');
+		}else return response(false,'Cannot process request, Please try again');
 	
 	}
 
