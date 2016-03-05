@@ -27,7 +27,7 @@ class House_model extends CI_Model {
 				}
 				else {
 					$this->db->trans_commit();
-					return response(true,'House successfully addded!');
+					return response(true,'House successfully added!');
 				}
 			
 			}else return response(false,'House detail already exist');

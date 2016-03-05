@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Main extends CI_Controller {
+class Validation extends CI_Model {
 
 	public function __construct() {
 
@@ -10,18 +10,14 @@ class Main extends CI_Controller {
 
 	}
 
-	public function index() {
-		
-		$this->load->view('login/login');
-	
-	}
-
 	private function checkAccess() {
-		
-		if($this->session->userdata('user_name')) {
-			redirect('Home/index');
+
+		if(!$this->session->userdata('user_name')) {
+
+			redirect('/');
+
 		}
-		
+
 	}
 
 }

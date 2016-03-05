@@ -6,17 +6,16 @@ class Home extends CI_Controller {
 	public function __construct() {
 
 		parent::__construct();
+		$this->load->model('Validation');
+		$this->load->helper('page_helper');
 		
 	}
 
 	public function index() {
-		
-		$data = array(
-			'title' => 'Home'
-		);
 
-		$this->load->view('includes/includes',$data);
+		$this->load->view('includes/includes',setPagetitle('Home'));
 		$this->load->view('menubar/menu');
+		
 	}
 
 }
