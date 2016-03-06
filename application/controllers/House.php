@@ -6,21 +6,28 @@ class House extends CI_Controller {
 	public function __construct() {
 
 		parent::__construct();
+		$this->load->model('Validation');
 		$this->load->model('House_model');
 		$this->load->helper('response_helper');
+		$this->load->helper('page_helper');
 
 	}
 
 	public function addHouse() {
-		
-		$data = array(
-			'title' => 'House'
-		);
 
-		$this->load->view('includes/includes',$data);
-		$this->load->view('menubar/menu');
+		$this->load->view('includes/includes',setPagetitle('House'));
+		$this->parser->parse('menubar/menu',getMenubarlink());
 		$this->load->view('house/addhouse');
 		$this->load->view('house/modal');
+		$this->load->view('footer/footer-scripts-house');
+
+	}
+
+	public function viewHouseList() {
+
+		$this->load->view('includes/includes/',setPagetitle('House'));
+		$this->load->view('menubar/menu');
+		$this->load->view('house/house_list');
 		$this->load->view('footer/footer-scripts-house');
 
 	}

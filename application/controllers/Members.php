@@ -6,18 +6,17 @@ class Members extends CI_Controller {
 	public function __construct() {
 
 		parent::__construct();
+		$this->load->model('Validation');
 		$this->load->model('Member_model');
 		$this->load->helper('response_helper');
+		$this->load->helper('page_helper');
 
 	}
 
 	public function addmembers() {
-		$data = array(
-			'title' => 'Members'
-		);
 
-		$this->load->view('includes/includes',$data);
-		$this->load->view('menubar/menu');
+		$this->load->view('includes/includes',setPagetitle('Members'));
+		$this->parser->parse('menubar/menu',getMenubarlink());
 		$this->load->view('members/addmembers');
 		$this->load->view('members/modal');
 		$this->load->view('footer/footer-scripts');
