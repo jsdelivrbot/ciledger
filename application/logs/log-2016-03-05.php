@@ -211,3 +211,30 @@ INFO - 2016-03-05 05:41:35 --> File loaded: C:\xampp\htdocs\ciledger\application
 INFO - 2016-03-05 05:41:35 --> File loaded: C:\xampp\htdocs\ciledger\application\views\footer/footer-scripts.php
 INFO - 2016-03-05 05:41:35 --> Final output sent to browser
 DEBUG - 2016-03-05 05:41:35 --> Total execution time: 0.0992
+INFO - 2016-03-05 07:38:47 --> Config Class Initialized
+INFO - 2016-03-05 07:38:47 --> Hooks Class Initialized
+DEBUG - 2016-03-05 07:38:47 --> UTF-8 Support Enabled
+INFO - 2016-03-05 07:38:47 --> Utf8 Class Initialized
+INFO - 2016-03-05 07:38:47 --> URI Class Initialized
+INFO - 2016-03-05 07:38:47 --> Router Class Initialized
+INFO - 2016-03-05 07:38:47 --> Output Class Initialized
+INFO - 2016-03-05 07:38:47 --> Security Class Initialized
+DEBUG - 2016-03-05 07:38:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-05 07:38:47 --> Input Class Initialized
+INFO - 2016-03-05 07:38:47 --> Language Class Initialized
+INFO - 2016-03-05 07:38:47 --> Loader Class Initialized
+INFO - 2016-03-05 07:38:47 --> Helper loaded: url_helper
+INFO - 2016-03-05 07:38:47 --> Database Driver Class Initialized
+INFO - 2016-03-05 07:38:47 --> Session: Class initialized using 'database' driver.
+INFO - 2016-03-05 07:38:47 --> Helper loaded: form_helper
+INFO - 2016-03-05 07:38:47 --> Form Validation Class Initialized
+INFO - 2016-03-05 07:38:47 --> Controller Class Initialized
+INFO - 2016-03-05 07:38:47 --> Model Class Initialized
+INFO - 2016-03-05 07:38:47 --> Helper loaded: response_helper
+INFO - 2016-03-05 07:38:47 --> File loaded: C:\xampp\htdocs\ciledger\application\views\includes/includes.php
+INFO - 2016-03-05 07:38:47 --> File loaded: C:\xampp\htdocs\ciledger\application\views\menubar/menu.php
+INFO - 2016-03-05 07:38:47 --> File loaded: C:\xampp\htdocs\ciledger\application\views\members/addmembers.php
+INFO - 2016-03-05 07:38:47 --> File loaded: C:\xampp\htdocs\ciledger\application\views\members/modal.php
+INFO - 2016-03-05 07:38:47 --> File loaded: C:\xampp\htdocs\ciledger\application\views\footer/footer-scripts.php
+INFO - 2016-03-05 07:38:47 --> Final output sent to browser
+DEBUG - 2016-03-05 07:38:47 --> Total execution time: 0.1162
