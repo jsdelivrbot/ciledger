@@ -14,7 +14,7 @@ class Home extends CI_Controller {
 	public function index() {
 
 		$this->load->view('includes/includes',setPagetitle('Home'));
-		$this->load->view('menubar/menu');
+		$this->parser->parse('menubar/menu',getMenubarlink());
 		
 	}
 

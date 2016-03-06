@@ -5533,3 +5533,43 @@ INFO - 2016-03-05 12:39:07 --> Helper loaded: response_helper
 INFO - 2016-03-05 12:39:07 --> Helper loaded: page_helper
 INFO - 2016-03-05 12:39:07 --> Final output sent to browser
 DEBUG - 2016-03-05 12:39:07 --> Total execution time: 0.0750
+INFO - 2016-03-05 17:10:17 --> Config Class Initialized
+INFO - 2016-03-05 17:10:17 --> Hooks Class Initialized
+DEBUG - 2016-03-05 17:10:17 --> UTF-8 Support Enabled
+INFO - 2016-03-05 17:10:17 --> Utf8 Class Initialized
+INFO - 2016-03-05 17:10:17 --> URI Class Initialized
+DEBUG - 2016-03-05 17:10:18 --> No URI present. Default controller set.
+INFO - 2016-03-05 17:10:18 --> Router Class Initialized
+INFO - 2016-03-05 17:10:18 --> Output Class Initialized
+INFO - 2016-03-05 17:10:18 --> Security Class Initialized
+DEBUG - 2016-03-05 17:10:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-05 17:10:18 --> Input Class Initialized
+INFO - 2016-03-05 17:10:18 --> Language Class Initialized
+INFO - 2016-03-05 17:10:18 --> Loader Class Initialized
+INFO - 2016-03-05 17:10:18 --> Helper loaded: url_helper
+INFO - 2016-03-05 17:10:18 --> Database Driver Class Initialized
+ERROR - 2016-03-05 17:10:21 --> Severity: Warning --> mysqli::real_connect(): (HY000/1049): Unknown database 'ciledger' C:\xampp\htdocs\ciledger\system\database\drivers\mysqli\mysqli_driver.php 202
+ERROR - 2016-03-05 17:10:21 --> Unable to connect to the database
+INFO - 2016-03-05 17:10:21 --> Language file loaded: language/english/db_lang.php
+INFO - 2016-03-05 17:13:04 --> Config Class Initialized
+INFO - 2016-03-05 17:13:04 --> Hooks Class Initialized
+DEBUG - 2016-03-05 17:13:04 --> UTF-8 Support Enabled
+INFO - 2016-03-05 17:13:04 --> Utf8 Class Initialized
+INFO - 2016-03-05 17:13:05 --> URI Class Initialized
+DEBUG - 2016-03-05 17:13:05 --> No URI present. Default controller set.
+INFO - 2016-03-05 17:13:05 --> Router Class Initialized
+INFO - 2016-03-05 17:13:05 --> Output Class Initialized
+INFO - 2016-03-05 17:13:05 --> Security Class Initialized
+DEBUG - 2016-03-05 17:13:05 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-05 17:13:05 --> Input Class Initialized
+INFO - 2016-03-05 17:13:05 --> Language Class Initialized
+INFO - 2016-03-05 17:13:05 --> Loader Class Initialized
+INFO - 2016-03-05 17:13:05 --> Helper loaded: url_helper
+INFO - 2016-03-05 17:13:05 --> Database Driver Class Initialized
+INFO - 2016-03-05 17:13:06 --> Session: Class initialized using 'database' driver.
+INFO - 2016-03-05 17:13:06 --> Helper loaded: form_helper
+INFO - 2016-03-05 17:13:06 --> Form Validation Class Initialized
+INFO - 2016-03-05 17:13:06 --> Controller Class Initialized
+INFO - 2016-03-05 17:13:06 --> File loaded: C:\xampp\htdocs\ciledger\application\views\login/login.php
+INFO - 2016-03-05 17:13:06 --> Final output sent to browser
+DEBUG - 2016-03-05 17:13:06 --> Total execution time: 1.9387

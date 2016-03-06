@@ -177,6 +177,21 @@ var formValidationRules = {
   };
 
 
+function _displayresponse(response) {
+  if(response.success) {
+    $('.ui.form').form('clear');
+    displayresponse(response);
+  }
+  else
+    displayresponse(response);
+}
+
+function displayresponse(response) {
+  $('#modalContent').text(response.message);
+  $('.ui.modal.addMember').modal({blurring: true}).modal('show');
+}
+
+
 $('.ui.form').form(formValidationRules).api({
   url: '/ciledger/Members/setMembers',
   method: 'POST',
@@ -196,16 +211,4 @@ $('.ui.form').form(formValidationRules).api({
 });
 
 
- function _displayresponse(response) {
-  if(response.success) {
-    $('.ui.form.addMember').form('clear');
-    displayresponse(response);
-  }
-  else
-    displayresponse(response);
-}
-
-function displayresponse(response) {
-  $('#modalContent').text(response.message);
-  $('.ui.modal.addMember').modal({blurring: true}).modal('show');
-}
+ 

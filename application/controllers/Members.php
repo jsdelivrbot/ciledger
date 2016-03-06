@@ -16,7 +16,7 @@ class Members extends CI_Controller {
 	public function addmembers() {
 
 		$this->load->view('includes/includes',setPagetitle('Members'));
-		$this->load->view('menubar/menu');
+		$this->parser->parse('menubar/menu',getMenubarlink());
 		$this->load->view('members/addmembers');
 		$this->load->view('members/modal');
 		$this->load->view('footer/footer-scripts');
