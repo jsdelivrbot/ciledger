@@ -12,7 +12,10 @@ class Main extends CI_Controller {
 
 	public function index() {
 		
-		$this->load->view('login/login');
+		$data = array(
+			'title' => 'Social Housing Financing System'
+		);
+		$this->load->view('login/login',$data);
 	
 	}
 

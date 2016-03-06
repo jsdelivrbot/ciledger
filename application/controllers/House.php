@@ -25,8 +25,8 @@ class House extends CI_Controller {
 
 	public function viewHouseList() {
 
-		$this->load->view('includes/includes/',setPagetitle('House'));
-		$this->load->view('menubar/menu');
+		$this->load->view('includes/includes',setPagetitle('House'));
+		$this->load->view('menubar/menu',getMenubarlink());
 		$this->load->view('house/house_list');
 		$this->load->view('footer/footer-scripts-house');
 
