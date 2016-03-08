@@ -4,68 +4,44 @@
 	<div class="field">
 		<div class="ui form">
 			<h4 class="ui dividing header">House Master List</h4>
-				<table class="ui compact celled definition table">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Name</th>
-      <th>Registration Date</th>
-      <th>E-mail address</th>
-      <th>Premium Plan</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="collapsing">
-        <div class="ui fitted slider checkbox">
-          <input type="checkbox"> <label></label>
+        <div class="field">
+          <div class="three fields">
+            <div class="field">
+                <input type="text" placeholder="Block no"/>
+            </div>
+            <div class="field">
+              <input type="text"  placeholder="Lot no" />
+            </div>
+            <div class="field">
+               <input type="text"  placeholder="Area" />
+            </div>
+          </div>
         </div>
-      </td>
-      <td>John Lilki</td>
-      <td>September 14, 2013</td>
-      <td>jhlilk22@yahoo.com</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td class="collapsing">
-        <div class="ui fitted slider checkbox">
-          <input type="checkbox"> <label></label>
+        <div class="field">
+          <button class="ui button primary">Search</button>
         </div>
-      </td>
-      <td>Jamie Harington</td>
-      <td>January 11, 2014</td>
-      <td>jamieharingonton@yahoo.com</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td class="collapsing">
-        <div class="ui fitted slider checkbox">
-          <input type="checkbox"> <label></label>
-        </div>
-      </td>
-      <td>Jill Lewis</td>
-      <td>May 11, 2014</td>
-      <td>jilsewris22@yahoo.com</td>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-  <tfoot class="full-width">
-    <tr>
-      <th></th>
-      <th colspan="4">
-        <div class="ui right floated small primary labeled icon button">
-          <i class="user icon"></i> Add User
-        </div>
-        <div class="ui small button">
-          Approve
-        </div>
-        <div class="ui small  disabled button">
-          Approve All
-        </div>
-      </th>
-    </tr>
-  </tfoot>
-</table>
+      <table class="ui striped table">
+        <thead>
+          <tr>
+            <th>Block No.</th>
+            <th>Lot No.</th>
+            <th>Area</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php 
+            foreach($results as $value) {
+             echo "<tr>";
+             echo "<td>{$value->house_block_no}</td>";
+             echo "<td>{$value->house_lot_no}</td>";
+             echo "<td>{$value->house_area}</td>";
+             echo "</tr>";
+            }
+            ?>
+       </tbody>
+    </table>
+
+				<?php echo $pagination;?>
 		</div>
 	</div>
 </div>

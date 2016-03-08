@@ -37,15 +37,47 @@ class House_model extends CI_Model {
 		
 	}
 
+	public function getHouseCount() {
+
+		return $this->db->count_all('tblhouse');
+
+	}
+
+
+	public function getPaginationHouseList($limit, $start) {
+
+		$data;
+		$query = "SELECT * FROM tblhouse order by house_block_no limit {$start}, {$limit}";
+		$SQL = $this->db->query($query);
+		
+		if($SQL->num_rows() > 0) {
+
+			foreach($SQL->result() as $row) {
+
+				$data[] = $row;
+
+			}
+
+			return $data;
+
+		} else return $data;
+
+	}
+
+
 	private function _tblhouse($house_detail) {
 
-		$data = array(
+		if(!empty($house_detail) || isset($house_detail)) {
+
+			$data = array(
 			'house_block_no' => $house_detail['house_block_no'],
 			'house_lot_no' => $house_detail['house_lot_no'],
 			'house_area' => $house_detail['house_area']
 			);
 
-		$this->db->insert('tblhouse',$data);
+			$this->db->insert('tblhouse',$data);
+
+		}		
 
 	}
 
