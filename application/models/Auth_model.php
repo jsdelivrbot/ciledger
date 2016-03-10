@@ -12,7 +12,7 @@ class Auth_model extends CI_Model {
 	public function getAuth($user_details) {
 
 		$this->db->select(array('user_name','user_fname','user_lname'));
-		$result = $this->db->get_where('tbluser',array('user_name'=>$user_details['username'],'user_password'=>md5($user_details['password'])));
+		$result = $this->db->get_where('tbluser',array('user_name'=>$user_details['username'],'user_password'=>md5($user_details['password']),'deleted'=>0));
 		$row = $result->row_array();
 		
 		if(!empty($row)) {

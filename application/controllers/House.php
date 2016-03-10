@@ -26,9 +26,19 @@ class House extends CI_Controller {
 
 	public function viewHouseList() {
 
+
+		$data = array_merge(
+			array('house_block_no' => $this->House_model->getBlock()),
+			array('house_lot_no' => $this->House_model->getLot()),
+			array('house_area',$this->House_model->getArea()),
+			$this->getPagination()
+		);
+
+		#die(var_dump(($this->House_model->getBlock())));
+
 		$this->load->view('includes/includes',setPagetitle('House'));
 		$this->parser->parse('menubar/menu',getMenubarlink());
-		$this->load->view('house/house_list',$this->getPagination());
+		$this->load->view('house/house_list',$data);
 		$this->load->view('footer/footer-scripts-house');
 
 	}
@@ -55,6 +65,12 @@ class House extends CI_Controller {
 		} else die(json_encode(response(false,'Cannot process request, Please try again'))); 
 
 	}
+
+	/*
+	*
+	* Method for pagination configs
+	*
+	*/
 
 	private function getPaginationConfig() {
 
@@ -103,5 +119,13 @@ class House extends CI_Controller {
 		return $data;
 
 	}
+
+
+	public function testmethod() {
+
+		print_r($this->House_model->getBlock());
+
+	}
+
 
 }

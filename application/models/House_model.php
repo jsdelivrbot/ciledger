@@ -47,7 +47,7 @@ class House_model extends CI_Model {
 	public function getPaginationHouseList($limit, $start) {
 
 		$data;
-		$query = "SELECT * FROM tblhouse order by house_block_no limit {$start}, {$limit}";
+		$query = "SELECT * FROM tblhouse  where deleted = 0 order by house_block_no limit {$start}, {$limit}";
 		$SQL = $this->db->query($query);
 		
 		if($SQL->num_rows() > 0) {
@@ -61,6 +61,45 @@ class House_model extends CI_Model {
 			return $data;
 
 		} else return $data;
+
+	}
+
+
+	public function getBlock() {
+
+		$data;
+		$this->db->select('house_block_no');
+		$SQL = $this->db->get_where('tblhouse',array('deleted' => 0));
+
+		if($SQL->num_rows() > 0) {
+
+			foreach ($SQL->result_array() as $value) {
+				
+				$data[] = $value;
+
+			}
+
+			return $data;
+
+		} return false;
+
+	}
+
+
+	public function getLot() {
+
+		
+		$this->db->select('house_lot_no');
+		return $this->db->get_where('tblhouse',array('deleted' => 0))->result_array();
+
+	}
+
+
+	public function getArea() {
+
+		
+		$this->db->select('house_area');
+		return $this->db->get_where('tblhouse',array('deleted' => 0))->result_array();
 
 	}
 
@@ -85,7 +124,7 @@ class House_model extends CI_Model {
 
 		/* returns true if house is available */
 
-		$sql = $this->db->get_where('tblhouse',$house_detail);
+		$sql = $this->db->get_where('tblhouse',array_merge($house_detail,array('deleted'=>0)));
 
 		return (($sql->num_rows() > 0) ? FALSE : TRUE);
 		
