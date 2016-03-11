@@ -70,3 +70,27 @@ function displayresponse(response) {
 	$('#modalContent').text(response.message);
 	$('#addHouse').modal({blurring: true}).modal('show');
 }
+
+
+// $('#submitSearch').click(function() {
+
+// 	$.ajax({
+
+// 		url:'/ciledger/House/searchviewHouseList',
+// 		method: 'POST',
+// 		data: {
+
+// 			house_block_no: $('house_block_no').val(),
+// 			house_lot_no: $('house_lot_no').val(),
+// 			house_area: $('house_area').val()
+
+// 		},
+// 		success: function(response) {
+
+// 			alert(response);
+
+// 		}
+
+// 	});
+
+// });

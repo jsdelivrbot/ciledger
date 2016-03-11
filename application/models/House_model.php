@@ -65,6 +65,38 @@ class House_model extends CI_Model {
 	}
 
 
+	public function getSearchPaginationHouseList($limit, $start, $data) {
+
+		$data;
+		$subquery = " ";
+		if(!empty($data['house_block_no'])) $house_block_no = $data['house_block_no'];
+		if(!empty($data['house_lot_no'])) $house_lot_no = $data['house_lot_no'];
+		if(!empty($data['house_area'])) $house_area = $data['house_area'];
+	
+
+		if(!empty($house_block_no)) $subquery .= " AND house_block_no = '{$house_block_no}'";
+		if(!empty($house_lot_no)) $subquery.= " AND house_lot_no = '{$house_lot_no}'";
+		if(!empty($house_area)) $subquery .= " AND house_area = '{$house_area}'";
+
+		$query = "SELECT * FROM tblhouse where deleted = 0 {$subquery} order by house_block_no limit {$start}, {$limit}";
+
+		$result = $this->db->query($query);
+		
+		if($result->num_rows() > 0 ) {
+
+			foreach($result->result() as $value) {
+
+				$data[] = $value;
+
+			}
+
+			return $data;
+
+		}else return $data;
+
+	}
+
+
 	public function getBlock() {
 
 		$data;

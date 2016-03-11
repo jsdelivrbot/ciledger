@@ -27,18 +27,27 @@ class House extends CI_Controller {
 	public function viewHouseList() {
 
 
-		$data = array_merge(
-			array('house_block_no' => $this->House_model->getBlock()),
-			array('house_lot_no' => $this->House_model->getLot()),
-			array('house_area',$this->House_model->getArea()),
-			$this->getPagination()
-		);
+		// $data = array_merge(
+		// 	#array('house_block_no' => $this->House_model->getBlock()),
+		// 	#array('house_lot_no' => $this->House_model->getLot()),
+		// 	#array('house_area',$this->House_model->getArea()),
+		// 	$this->getPagination()
+		// );
+		$this->load->view('includes/includes',setPagetitle('House'));
+		$this->parser->parse('menubar/menu',getMenubarlink());
+		$this->load->view('house/house_list',$this->getPagination());
+		$this->load->view('footer/footer-scripts-house');
 
-		#die(var_dump(($this->House_model->getBlock())));
+	}
+
+	public function searchviewHouseList() {
+
+		$data = array_filter($this->input->post());
+		#$this->House_model->getSearchPaginationHouseList($data);
 
 		$this->load->view('includes/includes',setPagetitle('House'));
 		$this->parser->parse('menubar/menu',getMenubarlink());
-		$this->load->view('house/house_list',$data);
+		$this->load->view('house/house_list',$this->getPagination('search',$data));
 		$this->load->view('footer/footer-scripts-house');
 
 	}
@@ -104,20 +113,28 @@ class House extends CI_Controller {
 
 	}
 
-	private function getPagination() {
-
+	private function getPagination($searchStrings = null, $entry = null) {
+		#die(print_r($entry));
 		$page;
-		$paginationConfig = $this->getPaginationConfig();
-		$this->pagination->initialize($paginationConfig);
-		
+		$paginationConfig = "";
 		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+		if($searchStrings == 'search') {
 
-		$data['results'] = $this->House_model->getPaginationHouseList($paginationConfig['per_page'], $page); 
+			$paginationConfig = $this->getPaginationConfig($searchStrings);
+			$data['results'] = $this->House_model->getSearchPaginationHouseList($paginationConfig['per_page'],$page,$entry);
+
+		}
+		elseif(empty($searchStrings)) {
+
+			$paginationConfig = $this->getPaginationConfig();
+			$data['results'] = $this->House_model->getPaginationHouseList($paginationConfig['per_page'], $page); 
+
+		}
+
+		$this->pagination->initialize($paginationConfig);
 		$data['pagination'] = $this->pagination->create_links();
-		
 
 		return $data;
-
 	}
 
 
